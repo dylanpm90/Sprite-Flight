@@ -187,7 +187,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.9215687, b: 0.007843138, a: 1}
+  m_Color: {r: 0.13333334, g: 0.23529412, b: 0.25882354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -315,6 +315,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -29.253
       objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18431373
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -388,7 +400,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.9215687, b: 0.007843138, a: 1}
+  m_Color: {r: 0.13333334, g: 0.23529412, b: 0.25882354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -407,8 +419,8 @@ Transform:
   m_GameObject: {fileID: 457445943}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.99529, y: 0.00967, z: 0}
-  m_LocalScale: {x: 1, y: 16, z: 1}
+  m_LocalPosition: {x: -14.62029, y: 0.00967, z: 0}
+  m_LocalScale: {x: 2.25, y: 16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1136337612}
@@ -532,7 +544,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.9215687, b: 0.007843138, a: 1}
+  m_Color: {r: 0.13333334, g: 0.23529412, b: 0.25882354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -655,6 +667,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -4.893
       objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18431373
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -748,6 +772,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 3.298
       objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18431373
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -840,7 +876,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.5691608, g: 0.7372549, b: 0.5691608, a: 1}
+  m_BackGroundColor: {r: 0.08627451, g: 0.12941177, b: 0.18039216, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1008,7 +1044,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.9215687, b: 0.007843138, a: 1}
+  m_Color: {r: 0.13333334, g: 0.23529412, b: 0.25882354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1027,8 +1063,8 @@ Transform:
   m_GameObject: {fileID: 1775517220}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.50471, y: 0.00967, z: 0}
-  m_LocalScale: {x: 1, y: 16, z: 1}
+  m_LocalPosition: {x: 13.00471, y: 0.00967, z: 0}
+  m_LocalScale: {x: 2, y: 16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1136337612}
@@ -1131,6 +1167,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 29.025
       objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18431373
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1144,6 +1192,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 734694450}
     m_Modifications:
+    - target: {fileID: -7688287388637836987, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: maxSize
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7688287388637836987, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: minSize
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7688287388637836987, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: maxSpeed
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: -7688287388637836987, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: minSpeed
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: -7688287388637836987, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: maxSpinSpeed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 774338156156431791, guid: 720cada160fd94e4090006466a715cc6, type: 3}
       propertyPath: m_Name
       value: Obstacle
@@ -1187,6 +1255,18 @@ PrefabInstance:
     - target: {fileID: 1769782257388279370, guid: 720cada160fd94e4090006466a715cc6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.087
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.b
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8008791072343418898, guid: 720cada160fd94e4090006466a715cc6, type: 3}
+      propertyPath: m_Color.r
+      value: 0.18431373
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

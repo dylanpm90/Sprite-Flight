@@ -1,0 +1,33 @@
+1. Generate a random direction vector:
+
+    In your Start() method, above the AddForce() line, 
+add the following line of code:
+
+Vector2 randomDirection = Random.insideUnitCircle;
+
+Explanation:
+
+    insideUnitCircle gives you a Vector2 with both X and Y 
+values between -1 and 1 — pointing in a random direction 
+within a circular area.
+
+2. Use the random direction to apply force:
+
+    Update your force line to use the following new 
+variable:
+
+rb.AddForce(randomDirection * randomSpeed);
+
+This will apply your random speed in a random direction 
+for each obstacle.
+
+3. Save and test:
+
+    Press Ctrl+S (macOS: Cmd+S) to save.
+    Return to Unity and enter Play mode — each obstacle 
+will now launch in a new random direction and speed each 
+time you start the game.
+
+You've now combined randomized direction and speed — 
+creating the chaotic motion that makes your game feel 
+lively and replayable.

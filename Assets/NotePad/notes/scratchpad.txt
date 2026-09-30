@@ -1,33 +1,38 @@
-1. Generate a random direction vector:
+1. Calculate the direction to the mouse:
 
-    In your Start() method, above the AddForce() line, 
-add the following line of code:
+    Inside your if block (after getting the mouse position in 
+world space), add the following line of code:
 
-Vector2 randomDirection = Random.insideUnitCircle;
+Vector2 direction = mousePos - transform.position;
 
 Explanation:
 
-    insideUnitCircle gives you a Vector2 with both X and Y 
-values between -1 and 1 — pointing in a random direction 
-within a circular area.
+    This line subtracts two positions: the mouse's position 
+minus the Player GameObject’s position.
+    The result is a 2D direction vector — a 2D line pointing 
+from the Player GameObject to the mouse.
 
-2. Use the random direction to apply force:
+2. Set the Player GameObject’s facing direction:
 
-    Update your force line to use the following new 
-variable:
+    Add the following line of code underneath the previous 
+one:
 
-rb.AddForce(randomDirection * randomSpeed);
+transform.up = direction;
 
-This will apply your random speed in a random direction 
-for each obstacle.
+Explanation:
 
-3. Save and test:
+    This tells Unity to rotate the player so that its “up” 
+direction now points along the direction vector.
+    This is an easy way to rotate a GameObject without using 
+angles or complex math.
 
-    Press Ctrl+S (macOS: Cmd+S) to save.
-    Return to Unity and enter Play mode — each obstacle 
-will now launch in a new random direction and speed each 
-time you start the game.
+3. Save and enter Play mode.
 
-You've now combined randomized direction and speed — 
-creating the chaotic motion that makes your game feel 
-lively and replayable.
+    Press Ctrl+S (macOS: Cmd+S) to save, then return to 
+Unity and enter Play mode.
+    Click in the Game view — the Player GameObject will 
+now visually rotate to point toward the mouse.
+
+You’ve now used vector subtraction and transform.up to 
+align the player’s rotation with a direction — a fast and 
+effective way to handle orientation in 2D games.

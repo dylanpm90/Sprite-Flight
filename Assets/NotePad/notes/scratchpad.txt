@@ -1,38 +1,38 @@
-1. Calculate the direction to the mouse:
+1. Add variables at the top of your script:
 
-    Inside your if block (after getting the mouse position in 
-world space), add the following line of code:
+    After the first opening curly brace ({) in your 
+PlayerController class, add the following lines of code:
 
-Vector2 direction = mousePos - transform.position;
+public float thrustForce = 1f;
+Rigidbody2D rb;
+
+2. Get the Rigidbody 2D component in Start():
+
+    Inside your Start() method, add the following line of 
+code to assign the Rigidbody 2D component to the variable:
+
+rb = GetComponent<Rigidbody2D>();
+
+3. Apply thrust inside the if-statement block:
+
+    After the line that sets transform.up = direction, 
+add the following line of code:
+
+rb.AddForce(direction * thrustForce);
 
 Explanation:
 
-    This line subtracts two positions: the mouse's position 
-minus the Player GameObject’s position.
-    The result is a 2D direction vector — a 2D line pointing 
-from the Player GameObject to the mouse.
+    direction is the vector pointing toward the mouse.
+    Multiplying by thrustForce controls how strongly the 
+force is applied.
 
-2. Set the Player GameObject’s facing direction:
-
-    Add the following line of code underneath the previous 
-one:
-
-transform.up = direction;
-
-Explanation:
-
-    This tells Unity to rotate the player so that its “up” 
-direction now points along the direction vector.
-    This is an easy way to rotate a GameObject without using 
-angles or complex math.
-
-3. Save and enter Play mode.
+4. Save and enter Play mode.
 
     Press Ctrl+S (macOS: Cmd+S) to save, then return to 
 Unity and enter Play mode.
-    Click in the Game view — the Player GameObject will 
-now visually rotate to point toward the mouse.
+    Click around the screen — the Player GameObject should 
+rotate and move toward the mouse when clicked.
 
-You’ve now used vector subtraction and transform.up to 
-align the player’s rotation with a direction — a fast and 
-effective way to handle orientation in 2D games.
+Note: You might notice the Player GameObject becomes 
+hard to control and goes too fast — don’t worry! You’ll fix 
+that in a future step.

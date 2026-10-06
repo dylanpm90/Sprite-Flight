@@ -1,38 +1,35 @@
-1. Add variables at the top of your script:
+1. Declare a variable to store elapsed time:
 
-    After the first opening curly brace ({) in your 
-PlayerController class, add the following lines of code:
+    Open your PlayerController script.
+    Near the top of the class (after your other variable declarations), add the following line of code:
 
-public float thrustForce = 1f;
-Rigidbody2D rb;
+private float elapsedTime = 0f;
 
-2. Get the Rigidbody 2D component in Start():
+Note: Writing private is not required — Unity automatically treats variables as private if you don’t specify them as private or public. Still, it’s a good habit to include private explicitly. This makes your code easier to understand by clearly showing which variables are private and which are public.
 
-    Inside your Start() method, add the following line of 
-code to assign the Rigidbody 2D component to the variable:
+2. Increment elapsed time using Time.deltaTime:
 
-rb = GetComponent<Rigidbody2D>();
+    Inside the Update() method, add the following line of code at the top:
 
-3. Apply thrust inside the if-statement block:
-
-    After the line that sets transform.up = direction, 
-add the following line of code:
-
-rb.AddForce(direction * thrustForce);
+elapsedTime += Time.deltaTime;
 
 Explanation:
 
-    direction is the vector pointing toward the mouse.
-    Multiplying by thrustForce controls how strongly the 
-force is applied.
+    += is a shorthand for "add to this variable."
+        elapsedTime += Time.deltaTime; is the same as writing: elapsedTime = elapsedTime + Time.deltaTime;
+    Time.deltaTime is the time (in seconds) since the last frame.
+    If you add that small number every frame, it adds up over time. The result is a running total of how much time has passed since the game started — this works no matter what the frame rate is.
 
-4. Save and enter Play mode.
+3. Log the result in the Console window:
 
-    Press Ctrl+S (macOS: Cmd+S) to save, then return to 
-Unity and enter Play mode.
-    Click around the screen — the Player GameObject should 
-rotate and move toward the mouse when clicked.
+    Below the line you just added, add the following line of code:
 
-Note: You might notice the Player GameObject becomes 
-hard to control and goes too fast — don’t worry! You’ll fix 
-that in a future step.
+Debug.Log("Elapsed time: " + elapsedTime);
+
+4. Test and observe the Console window:
+
+    Save the script, return to Unity, and enter Play mode to test.
+    Watch the Console window to see the timer increase over time.
+    Let the Player GameObject collide with an obstacle and notice that the log stops. This script is attached to the Player GameObject, so when it gets destroyed — the timer stops because the script is no longer in the scene.
+
+Your game now tracks how long the player survives using Time.deltaTime.

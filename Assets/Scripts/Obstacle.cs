@@ -5,12 +5,13 @@ public class Obstacle : MonoBehaviour
     // size vars for randomizer
     public float minSize = 0.5f;
     public float maxSize = 2.0f;
-    
+
     // random speed vars to randomize
     public float minSpeed = 50f;
     public float maxSpeed = 150f;
     public float maxSpinSpeed = 10f;
 
+    public GameObject bounceEffectPrefab;
     // declare var for rigidbody
     Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -39,5 +40,14 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
 
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Vector2 contactPoint = collision.GetContact(0).point;
+        GameObject bounceEffect = Instantiate(bounceEffectPrefab, contactPoint, Quaternion.identity);
+
+        // Destroy the effect after 1 second
+        Destroy(bounceEffect, 1f);
     }
 }

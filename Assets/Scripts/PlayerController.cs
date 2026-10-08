@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -15,11 +16,16 @@ public class PlayerController : MonoBehaviour
     public bool canDestroy = true;
     public GameObject boosterFlame;
     Rigidbody2D rb;
+    public GameObject explosionEffect;
+    private Button restartButton;
 
     void Start()
     {
         scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
+        restartButton = uiDocument.rootVisualElement.Q<Button>("RestartButton");
+        restartButton.style.display = DisplayStyle.None;
         rb = GetComponent<Rigidbody2D>();
+        restartButton.clicked += ReloadScene;
     }
 
     void Update()
@@ -34,7 +40,10 @@ public class PlayerController : MonoBehaviour
     {
         if (canDestroy)
         {
+            Instantiate(explosionEffect, transform.position,transform.rotation);
+            restartButton.style.display = DisplayStyle.Flex;
             Destroy(gameObject);
+
         }
     }
 
@@ -77,6 +86,11 @@ public class PlayerController : MonoBehaviour
         {
             boosterFlame.SetActive(false);
         }
+    }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

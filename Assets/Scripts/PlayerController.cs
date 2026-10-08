@@ -1,8 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
+    public UIDocument uiDocument;
+    private Label scoreText;
+    private float elapsedTime = 0f;
+    private float score = 0f;
+    public float scoreMultiplier = 10f;
     public float thrustForce = 1f;
     public float maxSpeed = 5f;
     [Tooltip("If enabled, the ship can be destroyed")]
@@ -12,11 +18,38 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
+        UpdateScore();
+        MovePlayer();
+
+
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (canDestroy)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void UpdateScore()
+    {
+        elapsedTime += Time.deltaTime;
+        score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
+
+        scoreText.text = "SCORE: " + score;
+    }
+
+    void MovePlayer()
+    {
+        // moves player if the mouse is pressed down in the 
+        // direction of the cursor.
         if (Mouse.current.leftButton.isPressed)
         {
             // Calculate mouse direction
@@ -44,13 +77,6 @@ public class PlayerController : MonoBehaviour
         {
             boosterFlame.SetActive(false);
         }
-
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (canDestroy){
-            Destroy(gameObject);
-        }
-    }
 }
